@@ -1,3 +1,4 @@
+@charset "IBM866";
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; vertical-align: baseline; }
 
 body, html { height: 100%; }
@@ -18,9 +19,10 @@ ul, ol { list-style-type: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
-body { font-family: calibri; }
+body { font-family: calibri; background: url(../img/bg.png) 100% 99px no-repeat; background-size: cover; height: 600px; }
+body:after { content: ""; top: 99px; background: linear-gradient(to bottom, #1d5a87 0%, rgba(255, 255, 255, 0) 100%); height: 80px; position: absolute; width: 100%; }
 
-.wrap { width: 1600px; background: #449922; margin: auto; }
+.wrap { width: 980px; margin: auto; }
 
 header { background: white; overflow: hidden; }
 header .header { width: 960px; margin: auto; overflow: hidden; padding: 30px 0 20px; }
@@ -32,5 +34,18 @@ header .header .header__form:hover { cursor: pointer; }
 header .header .header__user { float: right; display: inline-block; padding: 0; margin-top: 13px; }
 header .header .header__user a.user { background: url(../img/icons/home-orange.png) no-repeat 0% 50%; color: #27861b; font-size: 13px; text-decoration: none; padding-left: 25px; transition: 0.3s; }
 header .header .header__user a.user:hover { text-decoration: underline; color: #ff8532; }
-header .header .header__user a.user:active { color: #57b64b; font-size: 20px; }
+header .header .header__user a.user:active { color: #57b64b; }
 header .header .header__user a.user span { width: 0px; height: 0px; border-style: solid; border-width: 5px 5px 0 5px; border-color: #828e5f transparent transparent transparent; display: inline-block; margin: 0 6px; }
+
+nav { height: 80px; z-index: 1; position: relative; }
+nav .nav { position: relative; font-size: 16px; }
+nav .nav li { float: left; }
+nav .nav li a { text-decoration: none; padding: 20px 25px 10px 30px; display: inline-block; font-weight: bold; color: #27861b; background: white; transition: 0.7s; }
+nav .nav li a:hover { background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 100%); color: white; }
+nav .nav li a:active { background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.9) 100%); }
+nav .nav li:first-child a { background: transparent; color: white; }
+nav:before, nav:after { content: "Г"; float: left; background: white; width: 10000px; position: absolute; font-size: inherit; padding: 20px 0 10px; }
+nav:before { left: -10000px; }
+nav:after { padding-left: 20000px; }
+
+article { background: transparent; }
