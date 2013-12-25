@@ -41,7 +41,80 @@
 // 	font-family: "book",arial,sans-serif 
 
 // common blocks
+$green:#27861B
+$orange:#FF8532 
+body
+	font-family: calibri 
+.wrap
+	width: 1600px
+	background: #492
+	margin: auto 
 header
+	background: #fff
+	overflow: hidden
+	.header
+		width: 960px
+		margin: auto 
+		overflow: hidden
+		padding: 30px 0 20px		
+		.header__logo
+			float: left
+			display: inline-block 
+			margin: 8px 40px 0 0
+		.header__form
+			display: inline
+			input
+				border: 1px solid #B8D5E8
+				font: 12pt arial 
+				padding: 14px 
+				color: #7598AF 
+				border-radius: 2px
+				border-right: none
+				/*input[placeholder]
+					color: #f51*/
+			&:after         //btn
+				position: relative
+				content: ""  
+				background: url(../img/icons/mag.png) no-repeat 50% 50% $green
+				padding: 15px 35px
+				left: -5px
+			&:hover
+				cursor: pointer
+		.header__user
+			float: right
+			display: inline-block
+			padding: 0
+			margin-top: 13px 
+			a.user
+				//padding-left: 20px
+				background: url(../img/icons/home-orange.png) no-repeat 0% 50%
+				color: $green 
+				font-size: 13px
+				text-decoration: none
+				padding-left: 25px
+				transition: 0.3s
+				&:hover
+					text-decoration: underline
+					color: $orange
+				&:active
+					color: $green+#303030
+					font-size: 20px 
+					
+					
+				span         //триугольничек
+					width: 0px
+					height: 0px
+					border-style: solid
+					border-width: 5px 5px 0 5px
+					border-color: #828E5F transparent transparent transparent
+					display: inline-block
+					margin: 0 6px 
+						//margin-left: 5px
+
+
+
+			
+				
 nav
 article
 footer

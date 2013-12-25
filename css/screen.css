@@ -17,3 +17,20 @@ ul, ol { list-style-type: none; }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
+
+body { font-family: calibri; }
+
+.wrap { width: 1600px; background: #449922; margin: auto; }
+
+header { background: white; overflow: hidden; }
+header .header { width: 960px; margin: auto; overflow: hidden; padding: 30px 0 20px; }
+header .header .header__logo { float: left; display: inline-block; margin: 8px 40px 0 0; }
+header .header .header__form { display: inline; }
+header .header .header__form input { border: 1px solid #b8d5e8; font: 12pt arial; padding: 14px; color: #7598af; border-radius: 2px; border-right: none; /*input[placeholder] color: #f51 */ }
+header .header .header__form:after { position: relative; content: ""; background: url(../img/icons/mag.png) no-repeat 50% 50% #27861b; padding: 15px 35px; left: -5px; }
+header .header .header__form:hover { cursor: pointer; }
+header .header .header__user { float: right; display: inline-block; padding: 0; margin-top: 13px; }
+header .header .header__user a.user { background: url(../img/icons/home-orange.png) no-repeat 0% 50%; color: #27861b; font-size: 13px; text-decoration: none; padding-left: 25px; transition: 0.3s; }
+header .header .header__user a.user:hover { text-decoration: underline; color: #ff8532; }
+header .header .header__user a.user:active { color: #57b64b; font-size: 20px; }
+header .header .header__user a.user span { width: 0px; height: 0px; border-style: solid; border-width: 5px 5px 0 5px; border-color: #828e5f transparent transparent transparent; display: inline-block; margin: 0 6px; }
