@@ -43,10 +43,21 @@
 // common blocks
 $green:#27861B
 $orange:#FF8532 
+[class$="list"] 
+	position: relative
+	li
+		float: left
+		a  
+			text-decoration: none
+			display: inline-block
+			transition: 0.7s 
 body
 	font-family: calibri 
-	background: url(../img/bg.png) 100% 99px no-repeat  //фоновая картинка
-	background-size: cover //ковер
+	background: url(../img/bg.png)// 100% 99px no-repeat  //фоновая картинка
+	overflow: hidden
+	overflow-y: scroll
+	//background-size: cover //ковер
+	+cover
 	height: 600px
 	&:after  //полупрозрачный синий фон
 		content: ""
@@ -57,7 +68,7 @@ body
 		width: 100%
 .wrap
 	width: 980px
-	margin: auto 
+	margin: 0 auto 
 header
 	background: #fff
 	overflow: hidden
@@ -87,6 +98,8 @@ header
 				background: url(../img/icons/mag.png) no-repeat 50% 50% $green
 				padding: 15px 35px
 				left: -5px
+				border-top-right-radius: 2px
+				border-bottom-right-radius: 2px
 			&:hover
 				cursor: pointer
 		.header__user
@@ -115,32 +128,30 @@ header
 					display: inline-block
 					margin: 0 6px 
 nav
+	width: 980px
+	margin: 0 auto 
 	height: 80px
 	z-index: 1
 	position: relative
-	.nav
-		position: relative
+	.nav__list
 		font-size: 16px
 		li
 			float: left
 			a  
-				text-decoration: none
 				padding: 20px 25px 10px 30px
-				display: inline-block
-				//font-size: 16px
+				font-size: 16px
 				font-weight: bold
 				color: $green
 				background: #FFF 
-				transition: 0.7s   
 				&:hover
 					background: linear-gradient(to bottom, rgba(255,255,255,0.9) 0%,rgba(255,255,255,0) 100%)
 					color: #fff
 				&:active
 					background: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.9) 100%)
-			&:first-child  //для активной кнопки
-				a
-					background: transparent
-					color: #FFF 
+			.nav__is-active//для активной кнопки
+				//a
+				background: transparent
+				color: #FFF 
 					
 	&:before, &:after   //белые заслонки к меню
 		content: "Г"
@@ -156,4 +167,58 @@ nav
 		padding-left: 20000px
 article
 	background: transparent
+	position: relative
+	min-height: 700px  //надо???
 footer
+	color: #fff
+	font: 10px arial
+	.footer__top
+		background: url(../img/grass1.png) repeat-x 50% 100% #D9F0FF
+		border-top: 1px solid #B8D5E8
+		height: 107px
+	.footer__bottom  
+		background: #583416 
+		.footer__bottom-content
+			width: 980px
+			margin: 0 auto
+			padding: 67px 0 27px 10px
+			.footer__logo-white
+				float: left
+				margin-right: 28px
+				img
+			.footer__list
+				li
+					margin: 4px 0 0 22px
+					a
+						color: #fff
+						font: 12px arial
+						opacity: 0.5 
+						&:hover
+							text-decoration: underline
+					&:nth-of-type(5)
+						margin-left: 220px
+						margin-right: 5px	
+			.footer__btn
+				margin: 0 40px 0 25px 
+				display: inline-block
+				a
+					margin-top: 3px
+					i
+						display: inline-block
+						width: 16px
+						height: 16px
+						margin-top: 3px
+						&:hover
+							box-shadow: 0 0 5px 1px rgba(255,255,255,0.5)
+							border-radius: 3px 
+					.footer__btn-vk
+						background: url(../img/icons/vk.png)
+					.footer__btn-lj
+						background: url(../img/icons/lj.png)	 
+					.footer__btn-facebook
+						background: url(../img/icons/facebook.png)
+					.footer__btn-twitter
+						background: url(../img/icons/twitter.png)	
+			.footer__copy
+				opacity: 0.5
+				margin-top: 32px 			
