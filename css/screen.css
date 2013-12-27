@@ -23,7 +23,9 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 [class$="list"] li { float: left; }
 [class$="list"] li a { text-decoration: none; display: inline-block; transition: 0.7s; }
 
-body { font-family: calibri; background: url(../img/bg.png); overflow: hidden; overflow-y: scroll; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; height: 600px; }
+h1 { color: #2c7aad; font: 21px calibri; margin-left: 40px; }
+
+body { font-family: calibri; background: url(../img/bg.png); overflow-x: hidden; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; height: 600px; }
 body:after { content: ""; top: 99px; background: linear-gradient(to bottom, #1d5a87 0%, rgba(255, 255, 255, 0) 100%); height: 80px; position: absolute; width: 100%; }
 
 .wrap { width: 980px; margin: 0 auto; }
@@ -52,9 +54,10 @@ nav:before, nav:after { content: "Г"; float: left; background: white; width: 10
 nav:before { left: -10000px; }
 nav:after { padding-left: 20000px; }
 
-article { background: transparent; position: relative; min-height: 700px; }
+article { background: transparent; position: relative; }
+article .article__container { width: 930px; background: white; margin: 0 auto; min-height: 1000px; padding: 32px 25px; }
 
-footer { color: white; font: 10px arial; }
+footer { color: white; font: 10px arial; margin-top: -132px; }
 footer .footer__top { background: url(../img/grass1.png) repeat-x 50% 100% #d9f0ff; border-top: 1px solid #b8d5e8; height: 107px; }
 footer .footer__bottom { background: #583416; }
 footer .footer__bottom .footer__bottom-content { width: 980px; margin: 0 auto; padding: 67px 0 27px 10px; }
@@ -72,3 +75,5 @@ footer .footer__bottom .footer__bottom-content .footer__btn a .footer__btn-lj { 
 footer .footer__bottom .footer__bottom-content .footer__btn a .footer__btn-facebook { background: url(../img/icons/facebook.png); }
 footer .footer__bottom .footer__bottom-content .footer__btn a .footer__btn-twitter { background: url(../img/icons/twitter.png); }
 footer .footer__bottom .footer__bottom-content .footer__copy { opacity: 0.5; margin-top: 32px; }
+
+.mess__headline { background: url(../img/icons/set-mail.png) 0px 0px no-repeat; }

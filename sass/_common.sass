@@ -41,6 +41,7 @@
 // 	font-family: "book",arial,sans-serif 
 
 // common blocks
+//заготовка под все страници
 $green:#27861B
 $orange:#FF8532 
 [class$="list"] 
@@ -51,11 +52,17 @@ $orange:#FF8532
 			text-decoration: none
 			display: inline-block
 			transition: 0.7s 
+h1
+	color: #2c7aad
+	font: 21px calibri
+	margin-left: 40px		
+
+
 body
 	font-family: calibri 
 	background: url(../img/bg.png)// 100% 99px no-repeat  //фоновая картинка
-	overflow: hidden
-	overflow-y: scroll
+	overflow-x: hidden
+	//overflow-y: scroll
 	//background-size: cover //ковер
 	+cover
 	height: 600px
@@ -168,10 +175,17 @@ nav
 article
 	background: transparent
 	position: relative
-	min-height: 700px  //надо???
+	//min-height: 700px  //надо???
+	.article__container
+		width: 930px //padding 30 width=920+2*25
+		background: #FFF 
+		margin: 0 auto
+		min-height: 1000px  
+		padding: 32px 25px //width 980-50
 footer
 	color: #fff
 	font: 10px arial
+	margin-top: -132px 
 	.footer__top
 		background: url(../img/grass1.png) repeat-x 50% 100% #D9F0FF
 		border-top: 1px solid #B8D5E8
