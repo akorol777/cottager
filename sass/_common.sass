@@ -51,7 +51,7 @@ $orange:#FF8532
 		a  
 			text-decoration: none
 			display: inline-block
-			transition: 0.7s 
+			transition: 0.3s 
 h1
 	color: #2c7aad
 	font: 21px calibri
@@ -99,16 +99,19 @@ header
 				border-right: none
 				/*input[placeholder]
 					color: #f51*/
-			&:after         //btn
+			.header__form-btn
 				position: relative
-				content: ""  
+				display: inline-block 
 				background: url(../img/icons/mag.png) no-repeat 50% 50% $green
-				padding: 15px 35px
+				padding: 19px
 				left: -5px
 				border-top-right-radius: 2px
 				border-bottom-right-radius: 2px
-			&:hover
-				cursor: pointer
+				height: 49px
+				width: 60px
+				transition: 0.3s
+				&:hover
+					background: url(../img/icons/mag.png) no-repeat 50% 50% $green+#202020
 		.header__user
 			float: right
 			display: inline-block
@@ -153,9 +156,9 @@ nav
 				&:hover
 					background: linear-gradient(to bottom, rgba(255,255,255,0.9) 0%,rgba(255,255,255,0) 100%)
 					color: #fff
-				&:active
-					background: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.9) 100%)
-			.nav__is-active//для активной кнопки
+				//&:active
+					//background: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.9) 100%)
+			.is-active//для активной кнопки
 				//a
 				background: transparent
 				color: #FFF 
@@ -212,27 +215,31 @@ footer
 					&:nth-of-type(5)
 						margin-left: 220px
 						margin-right: 5px	
-			.footer__btn
+			.social    //сделать списком и назвать social
 				margin: 0 40px 0 25px 
 				display: inline-block
-				a
-					margin-top: 3px
-					i
-						display: inline-block
-						width: 16px
-						height: 16px
+				li
+					display: inline-block
+					float: left
+					margin-left: 2px	
+					a
 						margin-top: 3px
-						&:hover
-							box-shadow: 0 0 5px 1px rgba(255,255,255,0.5)
-							border-radius: 3px 
-					.footer__btn-vk
-						background: url(../img/icons/vk.png)
-					.footer__btn-lj
-						background: url(../img/icons/lj.png)	 
-					.footer__btn-facebook
-						background: url(../img/icons/facebook.png)
-					.footer__btn-twitter
-						background: url(../img/icons/twitter.png)	
+						i
+							display: inline-block
+							width: 16px
+							height: 16px
+							margin-top: 3px
+							&:hover
+								box-shadow: 0 0 5px 1px rgba(255,255,255,0.5)
+								border-radius: 3px 
+						.footer__btn-vk
+							background: url(../img/icons/vk.png)
+						.footer__btn-lj
+							background: url(../img/icons/lj.png)	 
+						.footer__btn-facebook
+							background: url(../img/icons/facebook.png)
+						.footer__btn-twitter
+							background: url(../img/icons/twitter.png)	
 			.footer__copy
 				opacity: 0.5
 				margin-top: 32px 			
