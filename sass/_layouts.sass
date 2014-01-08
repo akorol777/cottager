@@ -2,6 +2,111 @@
 //messages
 article
 	.article__container
-.mess__headline
-	//background: url(../img/icons/set-mail.png) 0px 0px no-repeat 
-.mess__content	
+		.mess__headline
+			background: url(../img/icons/messages.png) 0px 0px no-repeat
+			padding-left: 5px
+			margin-bottom: 20px
+			h1
+				padding: 0px 0px 30px 40px
+				background: url(../img/plant2.png) 1px 40px repeat-x 
+	.mess__content	
+		margin: 0 5px 
+		.mess__content-search
+			background: #F8EADD
+			padding: 20px 13px
+			border: 1px solid #F3E2D3
+			border-top: none 
+			box-shadow: 0px 1px 1px #E8D3BF
+			.mess__search
+				//margin: 20px 13px 
+				input
+					padding: 11px
+					box-shadow: inset 0 0 4px rgba(166,97,60,.75) 
+					//font: 13px arial 
+					.btn__orange
+		.mess__content-messages //строки с ответами
+			overflow: hidden
+			padding: 12px 
+			border: 1px solid #F3E2D3
+			border-top: none
+			[class^="messages__"]
+				display: inline-block
+			.messages__user
+				float: left
+				width: 230px
+				font-size: 13px
+				.messages__user-photo
+					display: inline-block
+					box-shadow: 0 1px 2px rgba(178,142,105,.75)
+					height: 41px
+					width: 41px
+					border: 2px solid #fff
+					margin-right: 12px
+					float: left
+					&:hover
+						box-shadow: 0 1px 5px rgba(178,142,105,.75)
+					img
+						max-width: 100%
+				.messages__user-name
+					color: $green
+					font-size: 14px 
+					//margin-right: 35px
+					//margin-bottom: 5px
+					
+					&:hover
+						color: $orange 
+						transition: 0.3s 
+				.env-green
+					i
+						background: url(../img/icons/env-green.png) 0 0 no-repeat
+						height: 9px
+						width: 12px 
+						transition: 0.3s 
+						vertical-align: middle
+						//line-height: 12
+						&:hover
+							box-shadow: 0 0 5px 1px $orange
+				.messages__user-letters
+					color: #475f6f
+					text-decoration: none
+					transition: 0.3s 
+					vertical-align: middle
+					&:hover
+						text-decoration: underline
+						color: $orange 
+				.messages__user-unread
+					color: $orange 
+					vertical-align: middle
+					&:hover
+						text-decoration: none
+				.bin-dark
+					i
+						background: url(../img/icons/bin-dark.png) 0 0 no-repeat
+						height: 14px
+						width: 11px 
+						vertical-align: middle
+						&:hover
+							box-shadow: 0 0 5px 1px $orange
+							background: url(../img/icons/bin-dark.png) 0 0 no-repeat, $orange 
+				.btn__orange-small
+					padding: 6px 8px 
+					display: inline-block
+					vertical-align: middle
+					margin-top: 2px
+			[class^="messages__sign"]
+				float: left
+				font-size: 20px
+				margin: 0 15px 0 5px
+				line-height: 13px
+			.messages__sign
+				color: $green
+			.messages__sign-answer
+				color: $orange 
+			.messages__text
+				width: 630px
+				font: 13px arial 
+				time
+					font: 11px calibri
+					color: #999
+
+

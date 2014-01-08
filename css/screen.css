@@ -23,7 +23,13 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 [class$="list"] li { float: left; }
 [class$="list"] li a { text-decoration: none; display: inline-block; transition: 0.3s; }
 
-h1 { color: #2c7aad; font: 21px calibri; margin-left: 40px; }
+[class^="btn"] { background: #ff8532; color: white; border-radius: 4px; font: 14px Arial; text-shadow: 0 1px 0 #af3500; padding: 9px 17px 9px 17px; font-weight: 700; margin-left: 20px; transition: 0.4S; vertical-align: top; }
+[class^="btn"]:hover { background: #ffa542; }
+[class^="btn"]:active { text-shadow: 5px 5px 5px #ff8532; }
+
+h1 { color: #2c7aad; font: 21px calibri; }
+
+i { display: inline-block; }
 
 body { font-family: calibri; background: url(../img/bg.png); overflow-x: hidden; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; height: 600px; }
 body:after { content: ""; top: 99px; background: linear-gradient(to bottom, #1d5a87 0%, rgba(255, 255, 255, 0) 100%); height: 80px; position: absolute; width: 100%; }
@@ -65,13 +71,40 @@ footer .footer__bottom .footer__bottom-content .footer__list li { margin: 4px 0 
 footer .footer__bottom .footer__bottom-content .footer__list li a { color: white; font: 12px arial; opacity: 0.5; }
 footer .footer__bottom .footer__bottom-content .footer__list li a:hover { text-decoration: underline; }
 footer .footer__bottom .footer__bottom-content .footer__list li:nth-of-type(5) { margin-left: 220px; margin-right: 5px; }
-footer .footer__bottom .footer__bottom-content .social { margin: 0 40px 0 25px; display: inline-block; }
-footer .footer__bottom .footer__bottom-content .social li { display: inline-block; float: left; margin-left: 2px; }
-footer .footer__bottom .footer__bottom-content .social li a { margin-top: 3px; }
-footer .footer__bottom .footer__bottom-content .social li a i { display: inline-block; width: 16px; height: 16px; margin-top: 3px; }
-footer .footer__bottom .footer__bottom-content .social li a i:hover { box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.5); border-radius: 3px; }
-footer .footer__bottom .footer__bottom-content .social li a .footer__btn-vk { background: url(../img/icons/vk.png); }
-footer .footer__bottom .footer__bottom-content .social li a .footer__btn-lj { background: url(../img/icons/lj.png); }
-footer .footer__bottom .footer__bottom-content .social li a .footer__btn-facebook { background: url(../img/icons/facebook.png); }
-footer .footer__bottom .footer__bottom-content .social li a .footer__btn-twitter { background: url(../img/icons/twitter.png); }
+footer .footer__bottom .footer__bottom-content .social__list { margin: 0 40px 0 25px; }
+footer .footer__bottom .footer__bottom-content .social__list li { margin-left: 2px; }
+footer .footer__bottom .footer__bottom-content .social__list li a i { width: 16px; height: 16px; margin-top: 3px; }
+footer .footer__bottom .footer__bottom-content .social__list li a i:hover { box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.5); border-radius: 3px; }
+footer .footer__bottom .footer__bottom-content .social__list li a .footer__btn-vk { background: url(../img/icons/vk.png); }
+footer .footer__bottom .footer__bottom-content .social__list li a .footer__btn-lj { background: url(../img/icons/lj.png); }
+footer .footer__bottom .footer__bottom-content .social__list li a .footer__btn-facebook { background: url(../img/icons/facebook.png); }
+footer .footer__bottom .footer__bottom-content .social__list li a .footer__btn-twitter { background: url(../img/icons/twitter.png); }
 footer .footer__bottom .footer__bottom-content .footer__copy { opacity: 0.5; margin-top: 32px; }
+
+article .article__container .mess__headline { background: url(../img/icons/messages.png) 0px 0px no-repeat; padding-left: 5px; margin-bottom: 20px; }
+article .article__container .mess__headline h1 { padding: 0px 0px 30px 40px; background: url(../img/plant2.png) 1px 40px repeat-x; }
+article .mess__content { margin: 0 5px; }
+article .mess__content .mess__content-search { background: #f8eadd; padding: 20px 13px; border: 1px solid #f3e2d3; border-top: none; box-shadow: 0px 1px 1px #e8d3bf; }
+article .mess__content .mess__content-search .mess__search input { padding: 11px; box-shadow: inset 0 0 4px rgba(166, 97, 60, 0.75); }
+article .mess__content .mess__content-messages { overflow: hidden; padding: 12px; border: 1px solid #f3e2d3; border-top: none; }
+article .mess__content .mess__content-messages [class^="messages__"] { display: inline-block; }
+article .mess__content .mess__content-messages .messages__user { float: left; width: 230px; font-size: 13px; }
+article .mess__content .mess__content-messages .messages__user .messages__user-photo { display: inline-block; box-shadow: 0 1px 2px rgba(178, 142, 105, 0.75); height: 41px; width: 41px; border: 2px solid white; margin-right: 12px; float: left; }
+article .mess__content .mess__content-messages .messages__user .messages__user-photo:hover { box-shadow: 0 1px 5px rgba(178, 142, 105, 0.75); }
+article .mess__content .mess__content-messages .messages__user .messages__user-photo img { max-width: 100%; }
+article .mess__content .mess__content-messages .messages__user .messages__user-name { color: #27861b; font-size: 14px; }
+article .mess__content .mess__content-messages .messages__user .messages__user-name:hover { color: #ff8532; transition: 0.3s; }
+article .mess__content .mess__content-messages .messages__user .env-green i { background: url(../img/icons/env-green.png) 0 0 no-repeat; height: 9px; width: 12px; transition: 0.3s; vertical-align: middle; }
+article .mess__content .mess__content-messages .messages__user .env-green i:hover { box-shadow: 0 0 5px 1px #ff8532; }
+article .mess__content .mess__content-messages .messages__user .messages__user-letters { color: #475f6f; text-decoration: none; transition: 0.3s; vertical-align: middle; }
+article .mess__content .mess__content-messages .messages__user .messages__user-letters:hover { text-decoration: underline; color: #ff8532; }
+article .mess__content .mess__content-messages .messages__user .messages__user-unread { color: #ff8532; vertical-align: middle; }
+article .mess__content .mess__content-messages .messages__user .messages__user-unread:hover { text-decoration: none; }
+article .mess__content .mess__content-messages .messages__user .bin-dark i { background: url(../img/icons/bin-dark.png) 0 0 no-repeat; height: 14px; width: 11px; vertical-align: middle; }
+article .mess__content .mess__content-messages .messages__user .bin-dark i:hover { box-shadow: 0 0 5px 1px #ff8532; background: url(../img/icons/bin-dark.png) 0 0 no-repeat, #ff8532; }
+article .mess__content .mess__content-messages .messages__user .btn__orange-small { padding: 6px 8px; display: inline-block; vertical-align: middle; margin-top: 2px; }
+article .mess__content .mess__content-messages [class^="messages__sign"] { float: left; font-size: 20px; margin: 0 15px 0 5px; line-height: 13px; }
+article .mess__content .mess__content-messages .messages__sign { color: #27861b; }
+article .mess__content .mess__content-messages .messages__sign-answer { color: #ff8532; }
+article .mess__content .mess__content-messages .messages__text { width: 630px; font: 13px arial; }
+article .mess__content .mess__content-messages .messages__text time { font: 11px calibri; color: #999999; }

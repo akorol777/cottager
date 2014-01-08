@@ -44,7 +44,7 @@
 //заготовка под все страници
 $green:#27861B
 $orange:#FF8532 
-[class$="list"] 
+[class$="list"] //ДЛЯ ВСЕХ СПИСКОВ
 	position: relative
 	li
 		float: left
@@ -52,11 +52,30 @@ $orange:#FF8532
 			text-decoration: none
 			display: inline-block
 			transition: 0.3s 
+			
+[class^="btn"]  //оранжевая кнопка
+	background: $orange 
+	color: #FFF 
+	border-radius: 4px
+	font: 14px Arial
+	text-shadow: 0 1px 0 $orange -#505050
+	padding: 9px 17px 9px 17px 
+	font-weight: 700 
+	margin-left: 20px
+	transition:  0.4S
+	vertical-align: top
+	&:hover
+		background: $orange+#102010 
+	&:active
+		//padding: 1px
+		text-shadow: 5px 5px 5px $orange //+#202020
+
+
 h1
 	color: #2c7aad
 	font: 21px calibri
-	margin-left: 40px		
-
+i //для иконок
+	display: inline-block
 
 body
 	font-family: calibri 
@@ -215,17 +234,13 @@ footer
 					&:nth-of-type(5)
 						margin-left: 220px
 						margin-right: 5px	
-			.social    //сделать списком и назвать social
+			.social__list
 				margin: 0 40px 0 25px 
-				display: inline-block
 				li
-					display: inline-block
-					float: left
 					margin-left: 2px	
 					a
-						margin-top: 3px
 						i
-							display: inline-block
+							//display: inline-block
 							width: 16px
 							height: 16px
 							margin-top: 3px
