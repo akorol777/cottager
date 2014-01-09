@@ -44,7 +44,10 @@
 //заготовка под все страници
 $green:#27861B
 $orange:#FF8532 
-[class$="list"] //ДЛЯ ВСЕХ СПИСКОВ
+$pink:#F8EADD
+$pink-bord:$pink -#090919
+$pink-hover:$pink +#06090c
+[class$="list"] //ДЛЯ ВСЕХ СПИСКОВ-менюшек
 	position: relative
 	li
 		float: left
@@ -64,6 +67,8 @@ $orange:#FF8532
 	margin-left: 20px
 	transition:  0.4S
 	vertical-align: top
+	display: inline-block
+	cursor: pointer
 	&:hover
 		background: $orange+#102010 
 	&:active

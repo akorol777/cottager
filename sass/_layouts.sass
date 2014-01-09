@@ -1,4 +1,48 @@
-// default layout
+//Общее
+
+.user__photo //отдельный общий класс для авок 
+	display: inline-block
+	box-shadow: 0 1px 2px rgba(178,142,105,.75)
+	height: 41px
+	width: 41px
+	border: 2px solid #fff
+	margin-right: 12px
+	float: left
+	&:hover
+		box-shadow: 0 1px 5px rgba(178,142,105,.75)
+	img
+		max-width: 100%
+		
+.user__name,.mess__user-all //отдельный общий класс для имен юзеров и зеленых ссылок
+	color: $green
+	font-size: 14px 					
+	&:hover
+		color: $orange 
+		transition: 0.3s 
+		text-decoration: none
+	
+.user__letters//для всех цифр-сообщений
+	color: #475f6f
+	text-decoration: none
+	transition: 0.3s 
+	vertical-align: middle
+	&:hover
+		text-decoration: underline
+		color: $green
+
+.user__unread//для всех цифр непрочитаных сообщений
+	color: $orange 
+	vertical-align: middle
+	&:hover
+		text-decoration: none
+		
+time//для даты
+	font: 11px calibri
+	color: #999		
+.messages-text//для текста в сообшениях
+	font: 13px arial
+	color: #475f6f //нужно overflow:hidden???
+
 //messages
 article
 	.article__container
@@ -12,7 +56,7 @@ article
 	.mess__content	
 		margin: 0 5px 
 		.mess__content-search
-			background: #F8EADD
+			background: $pink
 			padding: 20px 13px
 			border: 1px solid #F3E2D3
 			border-top: none 
@@ -33,24 +77,6 @@ article
 				float: left
 				width: 230px
 				font-size: 13px
-				.messages__user-photo
-					display: inline-block
-					box-shadow: 0 1px 2px rgba(178,142,105,.75)
-					height: 41px
-					width: 41px
-					border: 2px solid #fff
-					margin-right: 12px
-					float: left
-					&:hover
-						box-shadow: 0 1px 5px rgba(178,142,105,.75)
-					img
-						max-width: 100%
-				.messages__user-name
-					color: $green
-					font-size: 14px 					
-					&:hover
-						color: $orange 
-						transition: 0.3s 
 				.env-green
 					i
 						background: url(../img/icons/env-green.png) 0 0 no-repeat
@@ -60,19 +86,7 @@ article
 						vertical-align: middle
 						&:hover
 							box-shadow: 0 0 5px 1px $orange
-				.messages__user-letters
-					color: #475f6f
-					text-decoration: none
-					transition: 0.3s 
-					vertical-align: middle
-					&:hover
-						text-decoration: underline
-						color: $orange 
-				.messages__user-unread
-					color: $orange 
-					vertical-align: middle
-					&:hover
-						text-decoration: none
+				
 				.bin-dark
 					i
 						background: url(../img/icons/bin-dark.png) 0 0 no-repeat
@@ -96,11 +110,100 @@ article
 				color: $green
 			.messages__sign-answer
 				color: $orange 
-			.messages__text
+			.messages-text
 				width: 630px
-				font: 13px arial 
-				time
-					font: 11px calibri
-					color: #999
-
-
+				overflow: hidden//нужно всем???
+					
+//messages2
+.mess__user,.mess__chat
+	display: inline-block
+.mess__user
+	background: $pink 
+	//display: inline-block
+	float: left
+	width: 230px
+	.mess__user-up,.mess__user-down,.mess__user-info
+		border: 1px solid $pink-bord
+		border-top: none 
+		border-right: none
+	.mess__user-up,.mess__user-down
+		width: 230px 
+		height: 45px
+		text-decoration: none
+		display: inline-block
+		transition: 0,1s 
+		vertical-align: bottom
+	.mess__user-up
+		background: url(../img/icons/up.png) 50% 50% no-repeat
+		&:hover
+			background: url(../img/icons/up.png) 50% 50% no-repeat $pink-hover
+	.mess__user-down	
+		background: url(../img/icons/down.png) 50% 50% no-repeat
+		box-shadow: 0px 1px 0px #E8D3BF
+		&:hover
+			background: url(../img/icons/down.png) 50% 50% no-repeat $pink-hover
+	.mess__user-info
+		padding: 24px 17px 0 17px
+		.user__photo
+			margin: 0 10px 8px 18px
+		.user__name
+		div,ul
+			font: 11px arial
+			color: #475f6f
+		div
+			clear: left
+			margin-bottom: 10px
+			padding-left: 12px
+		ul
+			li
+				transition: 0,1s
+				position: relative 
+				padding: 5px 0 5px 12px 
+				&:hover
+					background: $pink-hover
+				.user__letters
+					float: right
+					margin-right: 70px
+				.user__unread	
+					position: absolute
+					left: 135px
+				
+	.mess__user-all
+		background: #fff
+		font: 13px calibri
+		display: block
+		padding-top: 17px
+.mess__chat
+	float: none
+	width: 70%
+	border: 1px solid $pink-bord
+	padding: 20px
+	.mess__chat-next
+		//float: right
+		color: $orange
+		transition: 0,1s
+		font: 13px calibri 
+		display: block
+		text-align: right
+		margin-bottom: 20px
+		&:hover
+			text-decoration: none
+			color: $green 
+	.mess__chat-ask,.mess__chat-answer
+		display: inline-block
+		width: 560px
+		padding: 15px 15px 20px 
+		margin-bottom: 15px
+		div
+			margin-top: 10px
+	.mess__chat-ask
+		float: left
+		border: 1px solid $pink-bord
+	.mess__chat-answer
+		background: $pink
+		float: right
+	.btn-chat
+		float: right
+		margin: 5px 5px 0 0
+	
+	
