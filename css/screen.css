@@ -60,7 +60,6 @@ nav:before { left: -10000px; }
 nav:after { padding-left: 20000px; }
 
 article { background: transparent; position: relative; }
-article .article__container { width: 930px; background: white; margin: 0 auto; min-height: 1000px; padding: 32px 25px; }
 
 footer { color: white; font: 10px arial; margin-top: -132px; }
 footer .footer__top { background: url(../img/grass1.png) repeat-x 50% 100% #d9f0ff; border-top: 1px solid #b8d5e8; height: 107px; }
@@ -81,6 +80,11 @@ footer .footer__bottom .footer__bottom-content .social__list li a .footer__btn-f
 footer .footer__bottom .footer__bottom-content .social__list li a .footer__btn-twitter { background: url(../img/icons/twitter.png); }
 footer .footer__bottom .footer__bottom-content .footer__copy { opacity: 0.5; margin-top: 32px; }
 
+[class^="article__container"] { width: 930px; background: white; margin: 0 auto; min-height: 1000px; padding: 32px 25px; overflow: hidden; }
+
+[class^="headline"] { padding-left: 5px; margin-bottom: 20px; }
+[class^="headline"] h1 { padding: 0px 0px 30px 40px; background: url(../img/plant5.png) 1px 40px repeat-x; }
+
 .user__photo { display: inline-block; box-shadow: 0 1px 2px rgba(178, 142, 105, 0.75); height: 41px; width: 41px; border: 2px solid white; margin-right: 12px; float: left; }
 .user__photo:hover { box-shadow: 0 1px 5px rgba(178, 142, 105, 0.75); }
 .user__photo img { max-width: 100%; }
@@ -98,8 +102,7 @@ time { font: 11px calibri; color: #999999; }
 
 .messages-text { font: 13px arial; color: #475f6f; }
 
-article .article__container .mess__headline { background: url(../img/icons/messages.png) 0px 0px no-repeat; padding-left: 5px; margin-bottom: 20px; }
-article .article__container .mess__headline h1 { padding: 0px 0px 30px 40px; background: url(../img/plant2.png) 1px 40px repeat-x; }
+article .article__container .headline { background: url(../img/icons/messages.png) 0px 0px no-repeat; }
 article .mess__content { margin: 0 5px; }
 article .mess__content .mess__content-search { background: #f8eadd; padding: 20px 13px; border: 1px solid #f3e2d3; border-top: none; box-shadow: 0px 1px 1px #e8d3bf; }
 article .mess__content .mess__content-search .mess__search input { padding: 11px; box-shadow: inset 0 0 4px rgba(166, 97, 60, 0.75); }
@@ -143,3 +146,10 @@ article .mess__content .mess__content-messages .messages-text { width: 630px; ov
 .mess__chat .mess__chat-ask { float: left; border: 1px solid #efe1c4; }
 .mess__chat .mess__chat-answer { background: #f8eadd; float: right; }
 .mess__chat .btn-chat { float: right; margin: 5px 5px 0 0; }
+
+.article__container-settings { background: transparent; padding-bottom: 100px; min-height: 500px; }
+
+.headline-settings { background: url(../img/icons/set-home3.png) 0px 0px no-repeat; }
+.headline-settings h1 { font-size: 25px; font-weight: bold; padding-top: 5px; }
+
+.set__options { float: left; background: white; padding: 25px 35px 20px 20px; width: 630px; min-height: 700px; }

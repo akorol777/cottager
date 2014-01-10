@@ -1,4 +1,18 @@
 //Общее
+[class^="article__container"] //контейнер общий
+	width: 930px //padding 30 width=920+2*25
+	background: #FFF 
+	margin: 0 auto
+	min-height: 1000px  
+	padding: 32px 25px //width 980-50
+	overflow: hidden
+		
+[class^="headline"] //headline общий
+	padding-left: 5px
+	margin-bottom: 20px
+	h1
+		padding: 0px 0px 30px 40px
+		background: url(../img/plant5.png) 1px 40px repeat-x
 
 .user__photo //отдельный общий класс для авок 
 	display: inline-block
@@ -46,13 +60,8 @@ time//для даты
 //messages
 article
 	.article__container
-		.mess__headline
+		.headline
 			background: url(../img/icons/messages.png) 0px 0px no-repeat
-			padding-left: 5px
-			margin-bottom: 20px
-			h1
-				padding: 0px 0px 30px 40px
-				background: url(../img/plant2.png) 1px 40px repeat-x 
 	.mess__content	
 		margin: 0 5px 
 		.mess__content-search
@@ -86,7 +95,6 @@ article
 						vertical-align: middle
 						&:hover
 							box-shadow: 0 0 5px 1px $orange
-				
 				.bin-dark
 					i
 						background: url(../img/icons/bin-dark.png) 0 0 no-repeat
@@ -119,7 +127,6 @@ article
 	display: inline-block
 .mess__user
 	background: $pink 
-	//display: inline-block
 	float: left
 	width: 230px
 	.mess__user-up,.mess__user-down,.mess__user-info
@@ -167,7 +174,6 @@ article
 				.user__unread	
 					position: absolute
 					left: 135px
-				
 	.mess__user-all
 		background: #fff
 		font: 13px calibri
@@ -179,7 +185,6 @@ article
 	border: 1px solid $pink-bord
 	padding: 20px
 	.mess__chat-next
-		//float: right
 		color: $orange
 		transition: 0,1s
 		font: 13px calibri 
@@ -205,5 +210,27 @@ article
 	.btn-chat
 		float: right
 		margin: 5px 5px 0 0
+		
+//SETTINGS
+.article__container-settings
+	background: transparent 
+	padding-bottom: 100px
+	min-height: 500px
+.headline-settings
+	background: url(../img/icons/set-home3.png) 0px 0px no-repeat
+	//background: transparent 
+	h1
+		font-size: 25px 
+		font-weight: bold
+		padding-top: 5px 
+//.set
+	//background: transparent 
+.set__options
+	float: left
+	background: #FFF 
+	padding: 25px 35px 20px 20px
+	width: 630px
+	min-height: 700px 
+.set__nav
 	
 	
