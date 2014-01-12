@@ -152,4 +152,9 @@ article .mess__content .mess__content-messages .messages-text { width: 630px; ov
 .headline-settings { background: url(../img/icons/set-home3.png) 0px 0px no-repeat; }
 .headline-settings h1 { font-size: 25px; font-weight: bold; padding-top: 5px; }
 
-.set__options { float: left; background: white; padding: 25px 35px 20px 20px; width: 630px; min-height: 700px; }
+.set__options { float: left; background: white; padding: 25px 35px 20px 25px; width: 625px; min-height: 700px; border: 1px solid #efe1c4; }
+.set__options h2 { display: block; color: #27861b; font: 16px calibri; font-weight: bold; background: url(../img/icons/set.png) 0px 2px no-repeat; padding-left: 15px; line-height: 16px; }
+.set__options .set__options-item { font: 13px arial; color: #485f6e; overflow: hidden; }
+.set__options .set__options-item:nth-child(2n+1) { background: #f8eadd; }
+.set__options .set__options-item span { float: left; padding: 15px 0 15px 20px; }
+.set__options .set__options-item form { padding-left: 200px; vertical-align: top; }
