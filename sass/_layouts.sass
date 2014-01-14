@@ -240,7 +240,7 @@ article
 		background: url(../img/icons/set.png) 0px 2px no-repeat
 		padding-left: 15px
 		line-height: 16px
-	.set__options-item
+	[class^="set__options-"]
 		font: 13px arial
 		color: #485f6e  
 		overflow: hidden
@@ -252,8 +252,54 @@ article
 		form
 			padding-left: 200px
 			vertical-align: top 
+	.set__options-checkbox
+		form
+			label
+				width: 18px
+				height: 19px
+				display: block
+				position: relative
+				overflow: hidden
+				input
+				span
+					position: absolute
+					left: 0 
+					top: 0
+					width: 100%
+					height: 100%
+					background: url(../img/icons/checkbox3.png) no-repeat
+					cursor: pointer
+				input[type="checkbox"]:checked + span
+					background-position: 0px -18px
+	.set__options-text
+		form
+			input
+				border: 1px solid $blue
+				border-radius: 2px
+				padding: 10px
+				color: $green 
+	.set__options-option //ЭТО ТА СРАНАЯ ХРЕНЬ!!!
+	.set__options-textarea	
+		form
+			textarea
+				border: 1px solid $blue
+				border-radius: 2px
+				padding: 10px
+				color: $green
+
 
 
 .set__nav
 	
-	
+
+
+
+
+
+.row__right
+	width: 409px
+	min-height: 30px
+	padding: 5px 0
+	display: inline-block
+	vertical-align: middle
+	margin-left: 200px
