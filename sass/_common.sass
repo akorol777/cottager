@@ -45,7 +45,7 @@
 $green:#27861B
 $orange:#FF8532 
 $pink:#F8EADD
-$blue:#B8D5E8
+$blue:#7598ae
 $pink-bord:$pink -#090919
 $pink-hover:$pink +#06090c
 [class$="list"] //ДЛЯ ВСЕХ СПИСКОВ-менюшек
@@ -61,10 +61,10 @@ $pink-hover:$pink +#06090c
 	background: $orange 
 	color: #FFF 
 	border-radius: 4px
-	font: 14px Arial
+	font: 16px Arial
 	text-shadow: 0 1px 0 $orange -#505050
 	padding: 9px 17px 9px 17px 
-	font-weight: 700 
+	//font-weight: 700 
 	margin-left: 20px
 	transition:  0.4S
 	vertical-align: top
@@ -92,7 +92,7 @@ body
 	height: 600px
 	&:after  //полупрозрачный синий фон
 		content: ""
-		top: 99px
+		top: 91px
 		background: linear-gradient(to bottom, rgba(29,90,135,1) 0%,rgba(255,255,255,0) 100%)
 		height: 80px
 		position: absolute
@@ -111,28 +111,29 @@ header
 		.header__logo
 			float: left
 			display: inline-block 
-			margin: 8px 40px 0 0
+			margin: 3px 40px 0 0
 		.header__form
 			display: inline
 			input
 				border: 1px solid #B8D5E8
-				font: 12pt arial 
-				padding: 14px 
+				font: 12px arial 
+				padding: 12px 
 				color: $blue 
 				border-radius: 2px
 				border-right: none
+				width: 425px
 				/*input[placeholder]
 					color: #f51*/
 			.header__form-btn
 				position: relative
 				display: inline-block 
 				background: url(../img/icons/mag.png) no-repeat 50% 50% $green
-				padding: 19px
+				//padding: 12px
 				left: -5px
 				border-top-right-radius: 2px
 				border-bottom-right-radius: 2px
-				height: 49px
-				width: 60px
+				height: 41px
+				width: 46px
 				transition: 0.3s
 				vertical-align: top
 				&:hover
@@ -141,7 +142,7 @@ header
 			float: right
 			display: inline-block
 			padding: 0
-			margin-top: 13px 
+			margin-top: 10px 
 			a.user
 				background: url(../img/icons/home-orange.png) no-repeat 0% 50%
 				color: $green 
